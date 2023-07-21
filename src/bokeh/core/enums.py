@@ -135,6 +135,7 @@ __all__ = (
     'Palette',
     'PanDirection',
     'Place',
+    'RadiusDimension',
     'RegionSelectionMode',
     'RenderLevel',
     'ResetPolicy',
@@ -497,6 +498,11 @@ Palette = enumeration(*palettes.__palettes__)
 #: Placement of a layout element, in particular in border-style layouts
 PlaceType = Literal["above", "below", "left", "right", "center"]
 Place = enumeration(PlaceType)
+
+
+#:
+RadiusDimensionType = Literal["x", "y", "max", "min"]
+RadiusDimension = enumeration(RadiusDimensionType)
 
 #: Specify a position in the render order for a renderer
 RenderLevelType = Literal["image", "underlay", "glyph", "guide", "annotation", "overlay"]

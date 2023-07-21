@@ -40,8 +40,8 @@ from ..core.enums import (
     ImageOrigin,
     OutlineShapeName,
     Palette,
+    RadiusDimension,
     StepMode,
-    enumeration,
 )
 from ..core.has_props import abstract
 from ..core.properties import (
@@ -485,7 +485,7 @@ class Circle(RadialGlyph, LineGlyph, FillGlyph, HatchGlyph):
         information.
     """)
 
-    radius_dimension = Enum(enumeration('x', 'y', 'max', 'min'), help="""
+    radius_dimension = Enum(RadiusDimension, help="""
     What dimension to measure circle radii along.
 
     When the data space aspect ratio is not 1-1, then the size of the drawn
@@ -1109,7 +1109,7 @@ class Ngon(RadialGlyph):
     no glyph instance being drawn.
     """)
 
-    radius_dimension = Enum(enumeration('x', 'y', 'max', 'min'), help="""
+    radius_dimension = Enum(RadiusDimension, help="""
     What dimension to measure n-gons radii along.
 
     When the data space aspect ratio is not 1-1, then the size of the drawn

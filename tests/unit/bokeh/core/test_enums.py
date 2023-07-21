@@ -75,6 +75,7 @@ ALL = (
     'Palette',
     'PanDirection',
     'Place',
+    'RadiusDimension',
     'RegionSelectionMode',
     'RenderLevel',
     'ResetPolicy',
@@ -295,6 +296,12 @@ class Test_bce:
     def test_PanDirection(self) -> None:
         assert tuple(bce.PanDirection) == ("left", "right", "up", "down", "west", "east", "north", "south")
 
+    def test_RadiusDimension(self) -> None:
+        assert tuple(bce.RadiusDimension) == ("x", "y", "max", "min")
+
+    def test_RegionSelectionMode(self) -> None:
+        assert tuple(bce.RegionSelectionMode) == ("replace", "append", "intersect", "subtract", "xor")
+
     def test_RenderLevel(self) -> None:
         assert tuple(bce.RenderLevel) == ("image", "underlay", "glyph", "guide", "annotation", "overlay")
 
@@ -309,9 +316,6 @@ class Test_bce:
 
     def test_RoundingFunction(self) -> None:
         assert tuple(bce.RoundingFunction) == ("round", "nearest", "floor", "rounddown", "ceil", "roundup")
-
-    def test_RegionSelectionMode(self) -> None:
-        assert tuple(bce.RegionSelectionMode) == ("replace", "append", "intersect", "subtract", "xor")
 
     def test_SelectionMode(self) -> None:
         assert tuple(bce.SelectionMode) == ("replace", "append", "intersect", "subtract", "xor", "toggle")
