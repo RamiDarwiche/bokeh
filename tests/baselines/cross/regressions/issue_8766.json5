@@ -227,6 +227,7 @@
                 },
               },
             ],
+            children: "auto",
             active_drag: {
               id: "p1119",
             },
@@ -455,6 +456,7 @@
                         id: "p1023",
                       },
                     ],
+                    children: "auto",
                     active_drag: {
                       id: "p1023",
                     },
@@ -773,6 +775,7 @@
                         id: "p1062",
                       },
                     ],
+                    children: "auto",
                     active_drag: {
                       id: "p1062",
                     },
@@ -1091,6 +1094,7 @@
                         id: "p1101",
                       },
                     ],
+                    children: "auto",
                     active_drag: {
                       id: "p1101",
                     },
