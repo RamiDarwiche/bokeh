@@ -45,6 +45,7 @@ from .scales import Scale
 from .sources import ColumnarDataSource
 from .tiles import TileSource
 from .tools import HoverTool, Tool, Toolbar
+from .ui import KeyBinding
 
 @dataclass
 class Plot(LayoutDOM, ScalarBackgroundFillProps, ScalarBorderLineProps, ScalarOutlineLineProps):
@@ -138,6 +139,8 @@ class Plot(LayoutDOM, ScalarBackgroundFillProps, ScalarBorderLineProps, ScalarOu
     hold_render: bool = ...
 
     attribution: list[HTML | str] = ...
+
+    key_bindings: list[KeyBinding] = ...
 
     def select(self, *args: Any, **kwargs: Any) -> Sequence[Model]: ...
 
