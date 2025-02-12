@@ -310,8 +310,12 @@ export class ToolbarView extends UIElementView {
 
   override _after_render(): void {
     super._after_render()
-
     clear(this._overflow_menu.items)
+
+    // TODO this is hopefully a temporary limitation
+    if (this.model.children != "auto" && this.model.children.some((c) => c != null && !(c instanceof ToolButton))) {
+      return
+    }
 
     if (this.shadow_el.contains(this._overflow_el)) {
       this.shadow_el.removeChild(this._overflow_el)
