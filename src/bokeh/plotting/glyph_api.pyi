@@ -23,7 +23,6 @@ from .._specs import (
     LineCapArg,
     LineJoinArg,
     MarkerArg,
-    NonNegative,
     NullDistanceArg,
     Number1dArg,
     Number2dArg,
@@ -36,6 +35,7 @@ from .._specs import (
     TextAnchorArg,
     TextBaselineArg,
 )
+from .._types import NonNegative
 from ..core.enums import (
     AnchorType as Anchor,
     AngleUnitsType as AngleUnits,
@@ -54,7 +54,7 @@ from ..models.callbacks import CustomJS
 from ..models.coordinates import CoordinateMapping
 from ..models.plots import Plot
 from ..models.renderers import GlyphRenderer
-from ..models.sources import ColumnarDataSource, DataDictLike
+from ..models.sources import CDSView, ColumnarDataSource, DataDictLike
 from ..models.textures import Texture
 
 class AuxVisuals(TypedDict, total=False):
@@ -166,6 +166,7 @@ class TextVisuals(AuxTextVisuals, total=False):
 
 class AuxGlyphArgs(TypedDict, total=False):
     source: ColumnarDataSource | DataDictLike
+    view: CDSView
 
     legend_label: str
     legend_field: str
